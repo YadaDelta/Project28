@@ -1,0 +1,23 @@
+{
+  "name": "project28",
+  "version": "0.0.1",
+  "description": "Quiz",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/YadaDelta/Project28.git"
+  },
+  "author": "yadadelta",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/YadaDelta/Project28/issues"
+  },
+  "homepage": "https://github.com/YadaDelta/Project28#readme",
+  "devDependencies": {
+    "eslint": "^8.42.0",
+    "eslint-config-airbnb-base": "^15.0.0"
+  }
+}
