@@ -27,11 +27,12 @@ body {
     text-align: center;
 }
 
-.quiz {
+#quiz {
     padding: 20px 0;
+    display: none;
 }
 
-.quiz h2 {
+#quiz h2, #menu h2 {
     font-size: 18px;
     color: #001e4d;
     font-weight: 600;

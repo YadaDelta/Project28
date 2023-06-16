@@ -31,6 +31,9 @@ const questions = [
 const questionEl = document.getElementById('question');
 const answerButtonEl = document.getElementById('answer-buttons');
 const nextButtonEl = document.getElementById('next-btn');
+const quiz = document.getElementById('quiz');
+const startButton = document.getElementById('start-quiz');
+const menu = document.getElementById('menu');
 
 let currentQuestionIndex = 0;
 let score = 0;
@@ -83,6 +86,8 @@ const startQuiz = () => {
   currentQuestionIndex = 0;
   score = 0;
   nextButtonEl.innerHTML = 'Next';
+  menu.style.display = 'none';
+  quiz.style.display = 'block';
   showQuestion();
 };
 
@@ -110,4 +115,4 @@ nextButtonEl.addEventListener('click', () => {
   }
 });
 
-startQuiz();
+startButton.addEventListener('click', startQuiz);
