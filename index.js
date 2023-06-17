@@ -34,7 +34,7 @@ const questions = [
       { answer: 'Сравнение', isCorrect: false },
       { answer: 'Ровно', isCorrect: false },
     ],
-  },  
+  },
   {
     questions: 'Что такое const',
     answers: [
