@@ -11,8 +11,8 @@ body {
 
 .main {
     background: white;
-    width: 90%;
-    max-width: 600px;
+    width: 80%;
+    max-width: 1366px;
     margin: 100px auto 0;
     border-radius: 10px;
     padding: 30px;
@@ -38,6 +38,7 @@ body {
     font-weight: 600;
     text-align: center;
     padding: 0 0 10px;
+    margin-top: 20px;
 }
 
 .btn {

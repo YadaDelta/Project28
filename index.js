@@ -26,6 +26,24 @@ const questions = [
       { answer: '\'Not \'like\' this\'', isCorrect: true },
     ],
   },
+  {
+    questions: '',
+    answers: [
+      { answer: '', isCorrect: true },
+      { answer: '', isCorrect: false },
+      { answer: '', isCorrect: false },
+      { answer: '', isCorrect: false },
+    ],
+  },  
+  {
+    questions: '',
+    answers: [
+      { answer: '', isCorrect: false },
+      { answer: '', isCorrect: false },
+      { answer: '', isCorrect: true },
+      { answer: '', isCorrect: false },
+    ],
+  },
 ];
 
 const questionEl = document.getElementById('question');
@@ -93,7 +111,13 @@ const startQuiz = () => {
 
 const showScore = () => {
   resetState();
-  questionEl.innerHTML = `Вы ответили на ${score} вопросов из ${questions.length}!`;
+    if (score === (0, 1, 2)) {
+      questionEl.innerHTML = `К сожалению ты ответил на ${score} вопросов из ${questions.length}. Не расстраивайся и попробуйте ещё раз, я уверен что у тебя всё получится!`
+    } else if (score === 3) {
+      questionEl.innerHTML = `Ты ответил на ${score} вопросов из ${questions.length}. Не плохой результат, но я уверен, что ты можешь лучше!`
+    } else if (score === (4, 5)) {
+      questionEl.innerHTML = `Поздравляю, ты ответил на ${score} вопросов из ${questions.length}, молодец!`
+    };
   nextButtonEl.innerHTML = 'Ещё раз!';
   nextButtonEl.style.display = 'block';
 };
