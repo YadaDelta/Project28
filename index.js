@@ -34,7 +34,7 @@ const questions = [
       { answer: 'Сравнение', isCorrect: false },
       { answer: 'Ровно', isCorrect: false },
     ],
-  },  
+  },
   {
     questions: 'Что такое const',
     answers: [
@@ -109,13 +109,13 @@ const startQuiz = () => {
 
 const showScore = () => {
   resetState();
-    if (score < 3) {
-      questionEl.innerHTML = `К сожалению ты ответил на ${score} вопросов из ${questions.length}. Не расстраивайся и попробуйте ещё раз, я уверен что у тебя всё получится!`
-    } else if (score === 3) {
-      questionEl.innerHTML = `Ты ответил на ${score} вопросов из ${questions.length}. Не плохой результат, но я уверен, что ты можешь лучше!`
-    } else if (score > 3) {
-      questionEl.innerHTML = `Поздравляю, ты ответил на ${score} вопросов из ${questions.length}, молодец!`
-    };
+  if (score < 3) {
+    questionEl.innerHTML = `К сожалению ты ответил на ${score} вопросов из ${questions.length}. Не расстраивайся и попробуйте ещё раз, я уверен что у тебя всё получится!`;
+  } else if (score === 3) {
+    questionEl.innerHTML = `Ты ответил на ${score} вопросов из ${questions.length}. Не плохой результат, но я уверен, что ты можешь лучше!`;
+  } else if (score > 3) {
+    questionEl.innerHTML = `Поздравляю, ты ответил на ${score} вопросов из ${questions.length}, молодец!`;
+  }
   nextButtonEl.innerHTML = 'Ещё раз!';
   nextButtonEl.style.display = 'block';
 };
