@@ -27,21 +27,19 @@ const questions = [
     ],
   },
   {
-    questions: '',
+    questions: 'Что означает оператор "="',
     answers: [
-      { answer: '', isCorrect: true },
-      { answer: '', isCorrect: false },
-      { answer: '', isCorrect: false },
-      { answer: '', isCorrect: false },
+      { answer: 'Присваивание', isCorrect: true },
+      { answer: 'Приравнивание', isCorrect: false },
+      { answer: 'Сравнение', isCorrect: false },
+      { answer: 'Ровно', isCorrect: false },
     ],
   },  
   {
-    questions: '',
+    questions: 'Что такое const',
     answers: [
-      { answer: '', isCorrect: false },
-      { answer: '', isCorrect: false },
-      { answer: '', isCorrect: true },
-      { answer: '', isCorrect: false },
+      { answer: 'Переменная', isCorrect: false },
+      { answer: 'Константа', isCorrect: true },
     ],
   },
 ];
@@ -111,11 +109,11 @@ const startQuiz = () => {
 
 const showScore = () => {
   resetState();
-    if (score === (0, 1, 2)) {
+    if (score < 3) {
       questionEl.innerHTML = `К сожалению ты ответил на ${score} вопросов из ${questions.length}. Не расстраивайся и попробуйте ещё раз, я уверен что у тебя всё получится!`
     } else if (score === 3) {
       questionEl.innerHTML = `Ты ответил на ${score} вопросов из ${questions.length}. Не плохой результат, но я уверен, что ты можешь лучше!`
-    } else if (score === (4, 5)) {
+    } else if (score > 3) {
       questionEl.innerHTML = `Поздравляю, ты ответил на ${score} вопросов из ${questions.length}, молодец!`
     };
   nextButtonEl.innerHTML = 'Ещё раз!';
