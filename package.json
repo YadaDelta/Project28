@@ -18,6 +18,7 @@
   "homepage": "https://github.com/YadaDelta/Project28#readme",
   "devDependencies": {
     "eslint": "^8.42.0",
-    "eslint-config-airbnb-base": "^15.0.0"
+    "eslint-config-airbnb-base": "^15.0.0",
+    "jest": "^29.5.0"
   }
 }
