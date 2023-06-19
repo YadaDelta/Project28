@@ -71,11 +71,12 @@ const selectAnswer = (e) => {
     selectedBtn.classList.add('incorrect');
   }
   const allButtons = Array.from(answerButtonEl.children);
-  allButtons.forEach((button) => {
-    if (button.dataset.isCorrect === 'true') {
-      button.classList.add('correct');
+  allButtons.forEach((btn) => {
+    const thisBtn = btn;
+    if (thisBtn.dataset.isCorrect === 'true') {
+      thisBtn.classList.add('correct');
     }
-    button.disabled = true;
+    thisBtn.disabled = true;
   });
   nextButtonEl.style.display = 'block';
 };
