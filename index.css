@@ -12,7 +12,6 @@ body {
 .main {
     background: lightblue;
     width: 70%;
-    height: 75%;
     margin-left: 15%;
     margin-top: 15px;
     border-radius: 10px;
@@ -46,6 +45,7 @@ body {
     margin: 3px;
     width: 25%;
     font-size: 20px;
+    cursor: pointer;
 }
 
 .games {
@@ -68,6 +68,44 @@ body {
     margin: 10px;
     margin-bottom: 70px;
     font-size: 20px;
+    cursor: pointer;
+}
+
+.sub-menu-2 {
+    margin-bottom: 30px;
+    background: lightblue;
+    margin: -15px auto 30px;
+    text-align: center;
+}
+
+#quiz {
+
+}
+
+#question {
+    text-align: center;
+    color: darkred;
+    margin-top: 350px;
+}
+
+#answer-buttons {
+    text-align: center;
+    margin: 15px auto;
+}
+
+.btn-3 {
+    width: 40%;
+    height: 40px;
+    background: plum;
+    border: 1px solid black;
+    cursor: pointer;
+    font-size: 20px;
+    margin: 15px 20px 15px 20px;
+}
+
+#next-btn {
+    font-size: 20px;
+    background: darkcyan;
 }
 
 .info {
@@ -80,17 +118,20 @@ body {
     height: 30px;
 }
 
-.btn-3 {
+.btn-4 {
     background: darkcyan;
     border: 1px solid black;
     width: 25%;
     height: 30px;
     font-size: 20px;
+    margin-top: 10px;
+    cursor: pointer;
 }
 
 .btn:hover:not([disabled]),
 .btn-2:hover:not([disabled]),
-.btn-3:hover:not([disabled]) {
+.btn-3:hover:not([disabled]),
+.btn-4:hover:not([disabled]) {
     color: #fff;
 }
 
