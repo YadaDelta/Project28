@@ -29,10 +29,10 @@ body {
 
 .sub-menu {
     background: lightblue;
-    width: 50%;
+    width: 80%;
     margin: -10px auto 0;
     border-radius: 5px;
-    text-align: center;
+    text-align: left;
     height: 50px;
 }
 
@@ -43,9 +43,20 @@ body {
     border-radius: 3px;
     height: 90%;
     margin: 3px;
-    width: 25%;
+    width: 15%;
     font-size: 20px;
     cursor: pointer;
+}
+
+.tema-btn {
+    display: inline-block;
+    height: 35px;
+    background: darkcyan;
+    border: 1px solid black;
+    border-radius: 100px;
+    font-size: 20px;
+    cursor: pointer;
+    margin-left: 44%;
 }
 
 .games {
@@ -63,7 +74,6 @@ body {
     width: 30%;
     height: 125px;
     border: 1px solid #222;
-    text-align: center;
     border-radius: 4px;
     margin: 10px;
     margin-bottom: 70px;
@@ -78,14 +88,55 @@ body {
     text-align: center;
 }
 
-#quiz {
+.name-game {
+    font-size: 25px;
+    margin-left: 100px;
+    margin-bottom: 20px;
+    color: darkred;
+}
 
+.back-btn {
+    background: darkcyan;
+    border: 1px solid black;
+    border-radius: 4px;
+    display: inline-block;
+    margin-left: 60%;
+    width: 10%;
+    height: 20px;
+    cursor: pointer;
+}
+
+.jpn {
+    background: plum;
+    color: #222;
+    width: 450px;
+    height: 300px;
+    border-radius: 4px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    margin-left: 70px;
+    font-size: 20px;
+}
+
+.progression {
+    background: darkcyan;
+    color: #222;
+    width: 30%;
+    height: 300px;
+    border-radius: 4px;
+    font-size: 20px;
+    margin-top: 10px;
+    margin-left: 35px;
+}
+
+.f {
+    display: flex;
 }
 
 #question {
     text-align: center;
     color: darkred;
-    margin-top: 350px;
+    font-size: 25px;
 }
 
 #answer-buttons {
@@ -131,7 +182,9 @@ body {
 .btn:hover:not([disabled]),
 .btn-2:hover:not([disabled]),
 .btn-3:hover:not([disabled]),
-.btn-4:hover:not([disabled]) {
+.btn-4:hover:not([disabled]),
+.btn-5:hover:not([disabled]),
+.back-btn:hover:not([disabled]) {
     color: #fff;
 }
 
@@ -151,6 +204,17 @@ body {
     border-radius: 4px;
     cursor: pointer;
     display: none;
+}
+
+.btn-5 {
+    background: darkcyan;
+    border: 1px solid black;
+    border-radius: 4px;
+    display: inline-block;
+    margin-left: 158px;
+    height: 25px;
+    margin-bottom: 10px;
+    margin-top: 10px;
 }
 
 .correct {
