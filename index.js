@@ -6,12 +6,18 @@ const nextButtonEl = document.getElementById('next-btn');
 const quiz = document.getElementById('quiz');
 const startButton = document.getElementById('start-quiz');
 const menu = document.getElementById('menu');
+const failButton = document.getElementById('fail-btn');
+const gamesButton = document.getElementById('menu-games');
+const aboutUsButton = document.getElementById('about');
+const aboutSection = document.getElementById('about-section');
+const progressBar = document.getElementById('progress-bar');
+const anotherGame = document.getElementById('start-another');
 
 let currentQuestionIndex = 0;
-let score = 0;
 
 const resetState = () => {
   nextButtonEl.style.display = 'none';
+  failButton.style.display = 'none';
   while (answerButtonEl.firstChild) {
     answerButtonEl.removeChild(answerButtonEl.firstChild);
   }
@@ -22,9 +28,16 @@ const selectAnswer = (e) => {
   const isCorrect = selectedBtn.dataset.isCorrect === 'true';
   if (isCorrect) {
     selectedBtn.classList.add('correct');
-    score += 1;
+    nextButtonEl.style.display = 'block';
+    const progressPoint = document.createElement('div');
+    progressPoint.classList.add('progress-bar-completion');
+    progressBar.appendChild(progressPoint);
   } else {
     selectedBtn.classList.add('incorrect');
+    failButton.style.display = 'block';
+    while (progressBar.firstChild) {
+      progressBar.removeChild(progressBar.firstChild);
+    }
   }
   const allButtons = Array.from(answerButtonEl.children);
   allButtons.forEach((btn) => {
@@ -34,12 +47,12 @@ const selectAnswer = (e) => {
     }
     thisBtn.disabled = true;
   });
-  nextButtonEl.style.display = 'block';
 };
 
 const showQuestion = () => {
   resetState();
-  const currentQuestion = questions[currentQuestionIndex];
+  const QuestionBank = questions[currentQuestionIndex];
+  const currentQuestion = QuestionBank[Math.floor(Math.random() * QuestionBank.length)];
   const questionNo = currentQuestionIndex + 1;
   questionEl.innerHTML = `${questionNo}. ${currentQuestion.questions}`;
 
@@ -57,22 +70,16 @@ const showQuestion = () => {
 
 const startQuiz = () => {
   currentQuestionIndex = 0;
-  score = 0;
-  nextButtonEl.innerHTML = 'Next';
+  nextButtonEl.innerHTML = 'Дальше!';
   menu.style.display = 'none';
   quiz.style.display = 'block';
+  aboutSection.style.display = 'none';
   showQuestion();
 };
 
 const showScore = () => {
   resetState();
-  if (score === 1) {
-    questionEl.innerHTML = `К сожалению ты ответил на ${score} вопрос из ${questions.length}. Не расстраивайся и попробуйте ещё раз, я уверен что у тебя всё получится!`;
-  } else if (score === 2 || score === 3 || score === 4) {
-    questionEl.innerHTML = `Ты ответил на ${score} вопроса из ${questions.length}. Не плохой результат, но я уверен, что ты можешь лучше!`;
-  } else if (score === 0 || score === 5) {
-    questionEl.innerHTML = `Поздравляю, ты ответил на ${score} вопросов из ${questions.length}, молодец!`;
-  }
+  questionEl.innerHTML = 'Поздравляем! Вы настоящий джаваскриптер!';
   nextButtonEl.innerHTML = 'Ещё раз!';
   nextButtonEl.style.display = 'block';
 };
@@ -90,8 +97,32 @@ nextButtonEl.addEventListener('click', () => {
   if (currentQuestionIndex < questions.length) {
     handleNextButton();
   } else {
+    while (progressBar.firstChild) {
+      progressBar.removeChild(progressBar.firstChild);
+    }
     startQuiz();
   }
+});
+
+failButton.addEventListener('click', () => {
+  startQuiz();
+});
+
+gamesButton.addEventListener('click', () => {
+  quiz.style.display = 'none';
+  menu.style.display = 'block';
+  aboutSection.style.display = 'none';
+});
+
+aboutUsButton.addEventListener('click', () => {
+  quiz.style.display = 'none';
+  menu.style.display = 'none';
+  aboutSection.style.display = 'block';
+});
+
+anotherGame.addEventListener('click', () => {
+  const anotherGameButton = anotherGame;
+  anotherGameButton.innerHTML = 'Мы не успели. Увы :<';
 });
 
 startButton.addEventListener('click', startQuiz);

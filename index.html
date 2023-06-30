@@ -7,60 +7,64 @@
     <link rel="stylesheet" href="index.css">
 </head>
 <body>
-    <div class="main">
-        <div id="menu">
-        <h1 class="h1">Квиз "Кто хочет стать программистом"</h1>
-        <div class="sub-menu">
-            <button class="btn">Лого</button>
-            <button class="btn">Миниигры</button>
-            <button class="btn">О нас</button>
-            <button class="tema-btn">Тема</button>
-        </div>
-        <div class="games">
-            <div>
-            <button class="btn-2" id="start-quiz">JS Викторина</button>
-            <button class="btn-2">2 игра</button>
-            <button class="btn-2">3 игра</button>
-            <button class="btn-2">4 игра</button>
-            <button class="btn-2">5 игра</button>
-            <button class="btn-2">6 игра</button>
+    <div class="wrapper">
+        <header>
+            <h1 class="h1">Квиз "Кто хочет стать программистом"</h1>
+            <div class="sub-menu">
+                <button class="btn" id="menu-games">Игры</button>
+                <button class="btn" id="about">О нас</button>
             </div>
-        </div>
-        </div>
-        <div id="quiz">
-            <div class="sub-menu-2">
-                <button class="btn">Лого</button>
-                <button class="btn">Миниигры</button>
-                <button class="btn">О нас</button>
-                <button class="tema-btn">Тема</button>
+        </header>
+        <div class="main">
+            <div id="menu">
+            <div class="games">
+                <div class="game-list">
+                    <button class="btn-2" id="start-quiz">JS Викторина</button>
+                    <button class="btn-2" id="start-another">2 игра</button>
+                </div>
             </div>
-            <div>
-                <h2 class="name-game">JS Викторина <button class="back-btn">Back</button></h2>
-                <div class="f">
-                    <img class="jpn" src="Проект.jpg" alt="">
-                    <h3 class="progression">Прогрессия</h3>
-                </div>
-                <h4 id="question">Вопрос</h4>
-                <div id="answer-buttons">
-                    <button class="btn-3">Ответ 1</button>
-                    <button class="btn-3">Ответ 2</button>
-                    <button class="btn-3">Ответ 3</button>
-                    <button class="btn-3">Ответ 4</button>
-                </div>
-                <button id="next-btn">Next</button>
+            </div>
+            <div id="quiz">
                 <div>
-                    <button class="btn-5">Помощь по игре</button>
-                    <button class="btn-5">Управление</button>
-                    <button class="btn-5">Полный экран</button>
+                    <div class="upper-section">
+                        <h4 class="game-name">JS Викторина</h4>
+                    </div>
+                    <div class="game-obs">
+                        <img class="logo" src="JSQuiz.jpeg" alt="">
+                        <div class="progression">
+                            <h3>Прогресс</h3>
+                            <div id="progress-bar">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="quiz-block">
+                        <h4 id="question">Вопрос</h4>
+                        <div id="answer-buttons">
+                            <button class="btn-3">Ответ 1</button>
+                            <button class="btn-3">Ответ 2</button>
+                            <button class="btn-3">Ответ 3</button>
+                            <button class="btn-3">Ответ 4</button>
+                        </div>
+                    </div>
+                    <button id="next-btn">Next</button>
+                    <button id="fail-btn">Заново!</button>
                 </div>
             </div>
-        </div>
-        <div class="info">
-            <div>
-                <button onclick="document.location='https://github.com/YadaDelta/Project28'" class="btn-4">GitHub</button>
+            <div id="about-section">
+                <img src="Project.jpg" alt="" class="about-image">
+                <h5>Проект группы 28</h5>
+                <div>Над сайтом работали:</div>
+                <div>Даниил Яшин - Ведущий программист</div>
+                <div>Рамин Медведев - Верстальщик, дизайнер, менеджер</div>
+                <div>Коростик Владислав - Создатель логотипа JSQuiz</div>
             </div>
         </div>
     </div>
+    <footer class="info">
+        <div>
+            <button onclick="document.location='https://github.com/YadaDelta/Project28'" class="btn-4">Репозиторий</button>
+        </div>
+    </footer>
 <script type="module" src="index.js"></script>
 </body>
 </html>
